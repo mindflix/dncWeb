@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>Page About</h1>
+    <h1>Page Network</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "About",
+    name: "Network",
   components: {},
 };
 </script>

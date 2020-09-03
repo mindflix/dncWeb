@@ -3,14 +3,13 @@
     <v-app-bar app color="white" shrink-on-scroll>
       <nav class="mx-auto">
         <div class="nav-title">D&C</div>
-        <ul class="nav-links">
-          <li>Price</li>
-          <li>Network</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Project</li>
-          <li>Partner</li>
-        </ul>
+        <div class="nav-links">
+          <router-link
+            v-for="routes in links"
+            v-bind:key="routes.id"
+            :to="`${routes.page}`"
+          >{{routes.text}}</router-link>
+        </div>
       </nav>
     </v-app-bar>
   </v-card>
@@ -37,3 +36,45 @@ ul {
   font-size: 0.7em;
 }
 </style>
+
+<script>
+export default {
+  name: "Navbar",
+  data() {
+    return {
+      links: [
+        {
+          id: 0,
+          text: "Price",
+          page: "/price",
+        },
+        {
+          id: 1,
+          text: "Network",
+          page: "/Network",
+        },
+        {
+          id: 2,
+          text: "About",
+          page: "/About",
+        },
+        {
+          id: 3,
+          text: "Contact",
+          page: "/Contact",
+        },
+        {
+          id: 4,
+          text: "Project",
+          page: "/Project",
+        },
+        {
+          id: 5,
+          text: "Partner",
+          page: "/Partner",
+        },
+      ],
+    };
+  },
+};
+</script>
