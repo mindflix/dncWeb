@@ -1,5 +1,9 @@
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <v-sheet class="overflow-y-auto">
+      <v-container style="height: 2000px;"></v-container>
+    </v-sheet>
+  </div>
 </template>
 
 <script>
