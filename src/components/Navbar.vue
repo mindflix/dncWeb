@@ -1,15 +1,20 @@
 <template>
-  <v-card class="overflow-hidden">
-    <v-app-bar app color="white" shrink-on-scroll>
-      <nav class="mx-auto">
-        <div class="nav-title">D&C</div>
-        <div class="nav-links">
-          <router-link
-            v-for="routes in links"
-            v-bind:key="routes.id"
-            :to="`${routes.page}`"
-          >{{routes.text}}</router-link>
-        </div>
+  <v-card>
+    <v-app-bar app color="white" shrink-on-scroll class="overflow-y-hidden">
+      <nav class="mx-auto my-auto">
+        <v-toolbar-title class="text-h6">
+          <router-link to="/" class="d-block nav-title">D&C</router-link>
+        </v-toolbar-title>
+        <v-toolbar-items>
+          <div class="d-block">
+            <router-link
+              class="nav-links"
+              v-for="routes in links"
+              v-bind:key="routes.id"
+              :to="`${routes.page}`"
+            >{{routes.text}}</router-link>
+          </div>
+        </v-toolbar-items>
       </nav>
     </v-app-bar>
   </v-card>
@@ -22,17 +27,11 @@
   font-family: "Jacques Francois Shadow", cursive;
   text-align: center;
   font-size: 2em;
+  margin-bottom: 0.15em;
 }
 
-ul {
-  text-transform: uppercase;
-  list-style: none;
-  display: inline-flex;
-}
-
-.nav-links > li {
+.nav-links {
   margin: 0 1em;
-  font-family: "Poppins", sans-serif;
   font-size: 0.7em;
 }
 </style>

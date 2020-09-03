@@ -22,3 +22,12 @@ export default {
   }),
 };
 </script>
+
+<style>
+a {
+  color: black !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+</style>
